@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(authRoutes);
 
-
+//random comment
 
 app.get('/', requireAuth, (req, res) => {
   res.send(`Your email: ${req.user.email}`);
