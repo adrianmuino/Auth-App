@@ -16,7 +16,7 @@ app.use(trackRoutes);
 const mongoUri = '';
 if (!mongoUri) {
   throw new Error(
-    `MongoURI was not supplied.  Make sure you watch the video on setting up Mongo DB!`
+    `MongoURI was not supplied.`
   );
 }
 mongoose.connect(mongoUri, {
