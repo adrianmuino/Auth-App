@@ -1,15 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
+import {WebView} from 'react-native-webview';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+     <Text>Video</Text>
+     <View style={{borderColor: 'red', borderWidth:1, width:200, height:200}} >
+       
+       <WebView
+          style={{flex:1}}
+          javaScriptEnabled={true}
+          source={{uri: '76.109.11.95:8899/stream.mjpg'}}
+          />
+          
+     </View>
+     
     </View>
   );
-}
+  }
 
 const styles = StyleSheet.create({
   container: {
@@ -17,5 +26,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    alignContent:'center',
   },
 });
