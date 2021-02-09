@@ -5,17 +5,16 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-     <Text>Video</Text>
-     <View style={{borderColor: 'red', borderWidth:1, width:200, height:200}} >
+     <Text style={{fontSize: 30, fontStyle: "italic", fontFamily: "Arial"}}>Camera 1</Text>
+     <View style={{borderColor: 'black', borderWidth:1, width:320, height:240}} >
        
        <WebView
           style={{flex:1}}
           javaScriptEnabled={true}
-          source={{uri: '76.109.11.95:8899/stream.mjpg'}}
+          source={{uri: 'http://76.109.11.95:8899/stream.mjpg'}}
           />
           
      </View>
-     
     </View>
   );
   }
